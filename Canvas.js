@@ -7,7 +7,7 @@ var D = new Stack(); //destination
 var gameColors = ["#ffff1a", "tomato", "black", "gray", "#800000","blue"];
 
 const rodWidth = 150; 
-const distance = 37.5;
+const distance = 12.5;
 var platesHightStart;
 
 
@@ -75,10 +75,10 @@ function initialize(){
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 600;
+        this.canvas.width = 500;
         this.canvas.height = 400;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.body.insertBefore(this.canvas, document.getElementById("btnContainer"));
         this.interval = setInterval(updateGameArea,  20);
 		this.canvas.setAttribute("id", "tower");
     },

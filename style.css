@@ -1,3 +1,8 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 body {
   background: black url("img/BG1.png") repeat-x 0px 110px;
 }
@@ -16,8 +21,8 @@ canvas:hover {
 }
 
 #level {
-  position: absolute;
-  top: 30px;
+  /* position: absolute;
+  top: 30px; */
 }
 
 #level button {
@@ -39,7 +44,7 @@ canvas:hover {
   position: relative;
   top: -400px;
   left: 370px;
-  width: 600px;
+  width: 500px;
   height: 400px;
   /* background-color: black;
   opacity: 0; */
@@ -53,9 +58,9 @@ canvas:hover {
 #btnPop button,
 #btnPush button {
   padding: 120px 73px;
-  opacity: 0;
+  opacity: 0.1;
   background-color: #171b1d;
-  margin-left: 34.5px;
+  margin-left: 11.5px;
 }
 
 #counter {
