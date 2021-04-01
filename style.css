@@ -54,7 +54,7 @@ canvas:hover {
 #btnPush button {
   position: relative;
   padding: 120px 71.5px;
-  opacity: 0.5;
+  opacity: 0;
   background-color: #5a2ff6;
   margin-left: 12.5px;
   top: 140px;
@@ -82,4 +82,11 @@ canvas:hover {
 
 #circle_logo {
   border-radius: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: none;
+    background: rgb(5, 62, 77);
+  }
 }

@@ -216,6 +216,20 @@ function component(width, height, color, x, y, type) {
     }    
 }
 
+function checkIfWin(){
+	if(S.isEmpty() && T.isEmpty() && D.length() === gamelevel){
+		console.log("You Win!");
+		setTimeout( wait10ms, 100)
+		gamelevel++;
+		initialize();
+		return true;
+	}
+	return false;
+}
+
+function wait10ms(){
+	window.alert("You Win proceding to " + (gamelevel +1))
+}
 function updateGameArea() {
     myGameArea.clear();
     myRodes[0].update();
@@ -232,5 +246,8 @@ function updateGameArea() {
 	if(canvasCoordinates.y >= 140 ){
 		document.querySelector(".btnContainer").style.top = document.getElementById("tower").getBoundingClientRect().y + "px";
 	}
+	checkIfWin();
 	// console.log(document.getElementById("tower").getBoundingClientRect().x, document.querySelector(".btnContainer"));
 }
+
+
