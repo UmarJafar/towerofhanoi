@@ -1,3 +1,4 @@
+
 var gamelevel = 3;
 var steps;
 
@@ -32,6 +33,8 @@ function startGame() {
     myRodes = [rod1, rod2, rod3];
     initialize();
     myGameArea.start();   
+	myBackground = new component(50, 50, "img/circle_logo.png", 440, 10, "image");
+
 }
 
 function initialize(){
@@ -183,6 +186,36 @@ function popButton(){
 }
 
 
+function component(width, height, color, x, y, type) {
+    this.type = type;
+    if (type == "image") {
+        this.image = new Image();
+        this.image.src = color;
+    }
+    this.width = width;
+    this.height = height;
+    this.speedX = 0;
+    this.speedY = 0;    
+    this.x = x;
+    this.y = y;    
+    this.update = function() {
+        ctx = myGameArea.context;
+        if (type == "image") {
+            ctx.drawImage(this.image, 
+                this.x, 
+                this.y,
+                this.width, this.height);
+        } else {
+            ctx.fillStyle = color;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+    }
+    this.newPos = function() {
+        this.x += this.speedX;
+        this.y += this.speedY;        
+    }    
+}
+
 function updateGameArea() {
     myGameArea.clear();
     myRodes[0].update();
@@ -191,9 +224,13 @@ function updateGameArea() {
     for(var i=0; i<gamelevel; i++){
     	myPlates[i].update();
     }
-	document.querySelector(".btnContainer").style.left = document.getElementById("tower").getBoundingClientRect().x + "px";
+	myBackground.update();
+	var canvasCoordinates  = document.getElementById("tower").getBoundingClientRect();
+	if(canvasCoordinates.x >= 0 ){
+		document.querySelector(".btnContainer").style.left = document.getElementById("tower").getBoundingClientRect().x + "px";
+	} 
+	if(canvasCoordinates.y >= 140 ){
+		document.querySelector(".btnContainer").style.top = document.getElementById("tower").getBoundingClientRect().y + "px";
+	}
 	// console.log(document.getElementById("tower").getBoundingClientRect().x, document.querySelector(".btnContainer"));
 }
-
-
-

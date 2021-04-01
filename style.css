@@ -4,14 +4,14 @@ body {
   padding: 0;
 }
 body {
-  background: black url("img/BG1.png") repeat-x 0px 110px;
+  background: #33e6e6 url("img/BG1.png") repeat-x 0px 110px;
 }
 
 canvas {
   background: url("img/BG3.jpg");
   display: block;
   margin: 0 auto;
-  margin-top: 110px;
+  margin-top: 140px;
   box-shadow: 0px 0px 30px #6d6d46;
   border-radius: 15px;
 }
@@ -41,45 +41,45 @@ canvas:hover {
 }
 
 .btnContainer {
-  position: relative;
-  top: -400px;
-  left: 370px;
+  position: absolute;
+  top: 0px;
+  left: 0;
   width: 500px;
   height: 400px;
-  /* background-color: black;
-  opacity: 0; */
-}
-.btnContainer #btnPop,
-.btnContainer #btnPush {
-  position: absolute;
-  top: 140px;
+  /* background-color: rgb(189, 20, 20);
+  opacity: 0.5; */
 }
 
 #btnPop button,
 #btnPush button {
-  padding: 120px 73px;
-  opacity: 0.1;
-  background-color: #171b1d;
-  margin-left: 11.5px;
+  position: relative;
+  padding: 120px 71.5px;
+  opacity: 0.5;
+  background-color: #5a2ff6;
+  margin-left: 12.5px;
+  top: 140px;
 }
 
-#counter {
-  position: absolute;
-  top: 300px;
-  left: 200px;
-  background-color: purple;
-  /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+/* #counter {
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    background-color: purple;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  } */
+
+#circle_logo {
+  border-radius: 50%;
 }
