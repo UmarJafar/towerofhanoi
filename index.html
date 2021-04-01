@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="Stack.js"></script>
+  <title>Tower of Hanoi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="startGame()">
+
+
+  <div id="level">
+    <button onclick="gamelevel = 3;initialize();">3</button>
+    <button onclick="gamelevel = 4;initialize();">4</button>
+    <button onclick="gamelevel = 5;initialize();">5</button>
+    <button onclick="gamelevel = 6;initialize();">6</button>
+  </div>
+
+  <!-- <button id="counter">0</button> -->
+
+  <div class="btnContainer">
+    <div id="btnPop">
+      <button id="btn1" onclick="popFrom(S)"></button>
+      <button id="btn2" onclick="popFrom(T)"></button>
+      <button id="btn3" onclick="popFrom(D)"></button><br><br>
+    </div>
+
+    <div id="btnPush" style="display: none;">
+      <button onclick="pushTo(S)"></button>
+      <button onclick="pushTo(T)"></button>
+      <button onclick="pushTo(D)"></button><br><br>
+    </div>
+  </div>
+
+  <script src="Canvas.js"></script>
+</body>
+
+</html>
