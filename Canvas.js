@@ -228,7 +228,7 @@ function checkIfWin(){
 }
 
 function wait10ms(){
-	window.alert("You Win proceding to " + (gamelevel +1))
+	window.alert("You Win proceding to " + (gamelevel))
 }
 function updateGameArea() {
     myGameArea.clear();
