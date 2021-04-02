@@ -216,19 +216,23 @@ function component(width, height, color, x, y, type) {
     }    
 }
 
-function checkIfWin(){
-	if(S.isEmpty() && T.isEmpty() && D.length() === gamelevel){
-		console.log("You Win!");
-		setTimeout( wait10ms, 100)
-		gamelevel++;
-		initialize();
-		return true;
+function checkIfWin() {
+    if (S.isEmpty() && T.isEmpty() && D.length() === gamelevel) {
+	if (gamelevel == 6) {
+	    window.location.replace("http://cozquest.com/");
+	    return;
 	}
-	return false;
+	console.log("You Win!");
+	setTimeout(wait10ms, 100)
+	gamelevel++;
+	initialize();
+	return true;
+    }
+    return false;
 }
 
-function wait10ms(){
-	window.alert("You Win proceding to " + (gamelevel))
+function wait10ms() {
+    window.alert("You Win proceding to level " + (gamelevel - 2))
 }
 function updateGameArea() {
     myGameArea.clear();
