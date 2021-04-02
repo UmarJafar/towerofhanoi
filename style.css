@@ -37,11 +37,11 @@ canvas:hover {
   font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
-  cursor: pointer;
+  cursor: pointer; user-select: none;
 }
 
 .btnContainer {
-  position: absolute;
+  position: absolute; user-select: none;
   top: 0px;
   left: 0;
   width: 500px;
@@ -57,7 +57,7 @@ canvas:hover {
   opacity: 0;
   background-color: #5a2ff6;
   margin-left: 12.5px;
-  top: 140px;
+  top: 140px; user-select: none;
 }
 
 /* #counter {
