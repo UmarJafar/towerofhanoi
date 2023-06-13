@@ -33,7 +33,7 @@ function startGame() {
     myRodes = [rod1, rod2, rod3];
     initialize();
     myGameArea.start();   
-	myBackground = new component(50, 50, "img/circle_logo.png", 440, 10, "image");
+	myBackground = new component(0, 0, "img/circle_logo.png", 440, 10, "image");
 
 }
 
