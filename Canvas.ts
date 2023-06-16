@@ -388,4 +388,19 @@ function updateGameArea() {
 	checkIfWin();
 }
 
+// const foo =(bar: unknown): void  =>{
+// 	if(typeof bar === 'number' ){
+// 		// let x : string = bar.toUpperCase();
+// 		let x : number = bar++;
+// 		console.log(x)
+// 	}
+// 	if(typeof bar === 'string' ){
+// 		// let x : number = bar++;
+// 		let x : string = bar.toUpperCase();
+// 		console.log(x)
+// 	}
+// }
+//
+// foo(4)
+// foo("ratingStats")
 
